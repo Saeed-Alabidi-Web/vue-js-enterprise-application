@@ -1,4 +1,4 @@
-/* package  import  */ 
+/* package  import  */
 import Vue from 'vue'
 import App from './App.vue'
 import VueI18n from "vue-i18n";
@@ -8,28 +8,31 @@ import services from '@/domain/services'
 import 'nprogress/nprogress.css'
 import messages from "../src/assets/locales"
 Vue.config.productionTip = false
-/* end package  import  */ 
+/* end package  import  */
 
 
-/* start localiztionation */ 
+/* start localiztionation */
 Vue.use(VueI18n);
-const i18n = new VueI18n({ locale: messages['en'],messages})
-/* end global error handler  */ 
-
-
-
-/* start global error handler  */ 
- Vue.config.errorHandler = function (err, vm, info) {
- 
-  services.log(err,'glouble error handler')
-}
-/* end  global error handler  */ 
-
- new Vue({
-   router,
-  store, 
-   i18n,
-  render: h => h(App)
+const i18n = new VueI18n({
+  locale: messages['en'],
+  messages
 })
-.$mount('#app')
- 
+/* end global error handler  */
+
+
+
+/* start global error handler  */
+Vue.config.errorHandler =  (err, vm, info)=> services.log(err, 'glouble error handler')
+/* end  global error handler  */
+
+
+
+
+
+new Vue({
+    router,
+    store,
+    i18n,
+    render: h => h(App)
+  })
+  .$mount('#app')

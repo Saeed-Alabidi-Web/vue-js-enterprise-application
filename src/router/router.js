@@ -1,7 +1,7 @@
 
-import Home from '@/views/views/Home.vue'
-import NotFoumd from '@/views/views/NotFoumd.vue'
-import NetWorkError from '@/views/views/NetWorkError.vue'
+import Home from '@/views/views/Home/Home.vue'
+import NotFoumd from '@/views/views/NotFoumd/NotFoumd.vue'
+import NetWorkError from '@/views/views/NetWorkError/NetWorkError.vue'
 
 export default [
     {
@@ -14,7 +14,7 @@ export default [
       path: '/about',
       name: 'About',
       props: true,
-      component: () => import('@/views/views/About.vue')
+      component: () => import('@/views/views/About/About.vue')
     }
     ,
     {
