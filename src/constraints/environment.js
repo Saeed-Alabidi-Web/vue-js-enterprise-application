@@ -9,10 +9,10 @@ const vxLocal = {
 }
 
 
-const servre = { 
+const server = { 
     publicKey:'saeed',  
     url:'https://jsonplaceholder.typicode.com/todos/'
 }
 
    
-export default {vxLocal,servre}
+export default {vxLocal,server}

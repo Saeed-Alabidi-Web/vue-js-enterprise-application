@@ -1,13 +1,15 @@
-
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import services from '@/infrastructure/services'
 import event from '../infrastructure/core/globalEvent'
 
- Vue.use(VueRouter)
- export default ({progress,routes}) => {
+Vue.use(VueRouter)
+export default ({
+  progress,
+  routes
+}) => {
 
-  
+
 
   const router = new VueRouter({
     mode: 'history',
@@ -16,8 +18,8 @@ import event from '../infrastructure/core/globalEvent'
 
   router.beforeEach((routeTo, routeFrom, next) => {
     progress.start();
-    event.route_before_each(routeTo, routeFrom)?
-    next():false;
+    event.route_before_each(routeTo, routeFrom) ?
+      next() : false;
 
   });
   router.afterEach(() => {
@@ -27,10 +29,9 @@ import event from '../infrastructure/core/globalEvent'
   });
 
   router.onError(error => {
-    services.log(error,'Router')
+    services.log(error, 'Router')
   });
 
-  return router; 
+  return router;
 
 }
-

@@ -4,10 +4,17 @@ import employes from './modules/employes'
 import service from '../services'
 
 
-const _persistence =service.vxLocal((state)=>({ user:state.user }));
-var _store=Store({_modules:{user,employes},persistence:_persistence});
+const _persistence = service.vxLocal((state) => ({
+    user: state.user
+}));
+var _store = Store({
+    _modules: {
+        user,
+        employes
+    },
+    persistence: _persistence
+});
 
-  
+
 
 export default _store;
-

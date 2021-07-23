@@ -4,16 +4,16 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default ({_modules,persistence} )=> { 
+export default ({
+    _modules,
+    persistence
+}) => {
 
     return new Vuex.Store({
-       
-        modules:_modules,
+
+        modules: _modules,
         plugins: [persistence.plugin]
 
     })
-       
+
 }
-
-
-

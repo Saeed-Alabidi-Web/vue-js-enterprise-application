@@ -1,20 +1,18 @@
 
 
 
-export default ({services,repos}) => {
-
+export default ({ services, repos }) => {
+ 
 
   const updateUser = services.asyncHandler(
-    async ({id}) => {
+    async ({ id }) => {
 
-     
-       const data = await repos.userRepos.getUser({id})
-        const status = await repos.userRepos.updatedbUser({data:data["data"]})
-      
-       return status;
+      const data = await repos.userRepos.getUser({ id })
+      const status = await repos.userRepos.updatedbUser({ data: data["data"] })
+      return status;
 
     });
- 
+
 
   return { updateUser };
 
