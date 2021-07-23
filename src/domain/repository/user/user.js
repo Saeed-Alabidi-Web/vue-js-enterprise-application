@@ -3,7 +3,7 @@ export default ({ constraints, store, api }) => {
 
 
   const getUser = async ({ id }) => {
-    const data = await api.get(constraints.environment.server.url + "/" + id)
+    const data = await api.get( "/" + id)
     return data;
   }
 

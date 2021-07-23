@@ -3,11 +3,11 @@ import progress from 'nprogress'
 import events from '../core/globalEvent'
 
 
-export default ({ publicToken }) => {
+export default ({ publicToken,baseURL }) => {
 
 
     const apiClient = axios.create({
-
+        baseURL:baseURL,
         timeout: 1000000,
         headers: {
             Accept: 'application/json',
