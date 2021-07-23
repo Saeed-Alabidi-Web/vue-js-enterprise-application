@@ -1,57 +1,39 @@
-import {
-  mapState
-} from "vuex";
-import user from "@/domain/usecase";
-import doctorjs from '../../Core/example'
 
+import usecase from "@/domain/usecase";
+import doctorjs from '../../core/example'
 
 let brain = {
 
   beforeRouteEnter(routeTo, routeFrom, next) {
-    user.user.getDataUser().then(() => {
+    usecase.user.updateUser({id:1}).then(() => {
       next()
     });
   },
- 
+
 
 
   beforeRouteUpdate(routeTo, routeFrom, next) {
-    user.user.getDataUser().then(() => {
+    usecase.user.updateUser({id:1 }).then(() => {
       next()
     });
 
   },
 
-
+  
   data() {
     return {
       isActive: false,
-      lang: 'ar'
+      lang: 'ar',
+      user:this.$store.state.user.user,
+      employes:this.$store.state.employes.user,
     };
   },
-
-
-
-  computed: {
-    ...mapState({
-      user: state => state.user.user,
-      employes: state => state.employes.user
-    })
-  },
-
-
-
+ 
 
   methods: {
-
-
-    go() {
-
-      this.isActive = true;
-      user.user.updateUser({
-        handler: () => {}
-      });
-    },
+    
+    
+    go:()=> usecase.user.updateUser({id:parseInt((Math.random() * 10) + 1)}),
 
     changeLang() {
       this.lang = this.$root.$i18n.locale = this.$root.$i18n.locale == 'en' ? 'ar' : 'en'

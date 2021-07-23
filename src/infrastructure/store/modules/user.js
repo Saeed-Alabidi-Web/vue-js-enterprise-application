@@ -6,7 +6,7 @@ export default {
         user:{}
     },
     mutations: {
-        SET_USER1(state,data){ state.user = data}
+        SET_USER1(state,data){Object.assign(state.user,data)}
     },
 
     actions: {

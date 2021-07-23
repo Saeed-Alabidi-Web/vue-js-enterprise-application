@@ -3,8 +3,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueI18n from "vue-i18n";
 import router from './router'
-import store from '@/domain/store'
-import services from '@/domain/services'
+import store from '@/infrastructure/store'
+import services from '@/infrastructure/services'
 import 'nprogress/nprogress.css'
 import messages from "../src/assets/locales"
 Vue.config.productionTip = false

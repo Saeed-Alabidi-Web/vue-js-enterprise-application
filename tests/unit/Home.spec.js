@@ -3,9 +3,9 @@ import VueI18n from "vue-i18n";
 import Vuex from 'vuex'
 
 import usecase from '../../src/domain/usecase'
-import employes from'../../src/domain/store/modules/employes'
-import user from'../../src/domain/store/modules/user'
-import home from '../../src/views/views/Home.vue'
+import employes from'../../src/infrastructure/store/modules/employes'
+import user from'../../src/infrastructure/store/modules/user'
+import home from '../../src/views/views/home/Home.vue'
 
 
 describe('home.vue', () => {

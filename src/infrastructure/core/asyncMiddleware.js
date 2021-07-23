@@ -1,5 +1,5 @@
  
-import log from './log'
+import log from '../services/log'
 import progress from 'nprogress'
 
 function asyncHandler(callback) {

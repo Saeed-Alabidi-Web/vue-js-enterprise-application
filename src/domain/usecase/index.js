@@ -1,6 +1,9 @@
-import userUseCase from './modal/user'
-import store from '@/domain/store'
- import _server from '@/domain/services'
-let user=userUseCase({store,api:_server.API})
- 
+import repos from '../repository'
+import services from '@/infrastructure/core/asyncMiddleware'
+import userUseCase from './user/user'
+let user=userUseCase({services,repos}) 
+
 export default {user}
+
+ 
+

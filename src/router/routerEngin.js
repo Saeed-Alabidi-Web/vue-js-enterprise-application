@@ -1,8 +1,8 @@
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import services from '@/domain/services'
-import event from '../domain/core/globalEvent'
+import services from '@/infrastructure/services'
+import event from '../infrastructure/core/globalEvent'
 
  Vue.use(VueRouter)
  export default ({progress,routes}) => {
