@@ -21,9 +21,9 @@
 
 
 
- function route_before_each(routeTo, routeFrom) {
+ function route_before_each(routeTo, routeFrom,next) {
 
-    return true;
+  next();
 }
 
 

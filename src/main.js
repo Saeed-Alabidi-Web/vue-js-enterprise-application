@@ -25,14 +25,14 @@ const i18n = new VueI18n({
 Vue.config.errorHandler =  (err, vm, info)=> services.log(err, 'glouble error handler')
 /* end  global error handler  */
 
+ 
 
-
-
-
-new Vue({
+let vue=new Vue({
     router,
     store,
     i18n,
     render: h => h(App)
   })
   .$mount('#app')
+
+  export const bus =vue;

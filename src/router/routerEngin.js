@@ -18,8 +18,7 @@ export default ({
 
   router.beforeEach((routeTo, routeFrom, next) => {
     progress.start();
-    event.route_before_each(routeTo, routeFrom) ?
-      next() : false;
+    event.route_before_each(routeTo, routeFrom,next)  
 
   });
   router.afterEach(() => {
