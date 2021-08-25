@@ -1,7 +1,6 @@
 
 import usecase from "@/domain/usecase";
-import doctorjs from '../../core/example'
-
+ 
 let brain = {
 
   beforeRouteEnter(routeTo, routeFrom, next) {
